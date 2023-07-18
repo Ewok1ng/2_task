@@ -57,13 +57,18 @@ body {
     min-width: 320px;
     overflow-x: hidden;
 
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+
+    color: $color-white;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+
+    background: $color-black;
 }
 
 .main {
@@ -80,10 +85,8 @@ body {
     padding: 0 15px;
 }
 
-.section__title {
-}
-
-@media (max-width: 520px) {
-    .section__title {
-    }
+.text-gradient {
+    background: $gradient-main;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

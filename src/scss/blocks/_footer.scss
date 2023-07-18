@@ -1,2 +1,160 @@
 .footer {
+    &__inner {
+        padding: 55px 0 20px;
+    }
+
+    &__top {
+        margin-bottom: 33px;
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+    }
+
+    &__column {
+        &:nth-child(2) {
+            margin-right: auto;
+        }
+
+        &:nth-child(3) {
+            text-align: right;
+        }
+    }
+
+    &__column-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: 0.7px;
+
+        color: $color-gray;
+
+        text-transform: uppercase;
+    }
+
+    &__list-item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+
+        & + & {
+            margin-top: 10px;
+        }
+
+        &--contacts {
+            & + & {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__social-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    &__social-item {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__social-item-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    &__copyrights {
+        margin-bottom: 5px;
+    }
+
+    &__policy {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        &__top {
+            gap: 30px;
+        }
+
+        &__column-inner {
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .footer {
+        background: $color-black;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        &__top {
+            flex-wrap: wrap;
+        }
+
+        &__column {
+            flex-grow: 1;
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+            &:nth-child(3) {
+                text-align: left;
+            }
+        }
+
+        &__list-item {
+            &--contacts {
+                & + & {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &__social-list {
+            justify-content: flex-start;
+        }
+
+        &__bottom {
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .footer {
+        &__title {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        &__list-item {
+            font-size: 14px;
+        }
+    }
 }

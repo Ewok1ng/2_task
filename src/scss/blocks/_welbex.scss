@@ -1,0 +1,249 @@
+.welbex {
+    position: relative;
+
+    padding: 90px 0 70px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -275px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 259px;
+        height: 259px;
+
+        background: $color-purple;
+        border-radius: 259px;
+        opacity: 0.5;
+        filter: blur(196px);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: -250px;
+
+            width: 311px;
+            height: 311px;
+
+            background: #961a1a;
+            border-radius: 311px;
+            opacity: 0.5;
+            filter: blur(196px);
+        }
+    }
+
+    &__description {
+        margin-bottom: 40px;
+
+        max-width: 290px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: normal;
+
+        text-align: right;
+    }
+
+    &__description-gradient {
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+
+    &__benefits {
+        margin-bottom: 60px;
+
+        max-width: 300px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: right;
+    }
+
+    &__mobile-benefits {
+        margin-bottom: 40px;
+
+        max-width: 300px;
+
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        text-align: left;
+    }
+
+    &__mobile-benefits-item {
+        position: relative;
+
+        padding-left: 15px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: normal;
+        letter-spacing: 0.65px;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            width: 10px;
+            height: 1px;
+
+            background: $gradient-main;
+        }
+    }
+
+    &__benefits-title {
+        margin-bottom: 6px;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: normal;
+
+        letter-spacing: 0.9px;
+
+        text-transform: uppercase;
+    }
+
+    &__benefits-info {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+
+    &__right {
+        position: relative;
+        padding-top: 15px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -55%;
+
+            width: 60px;
+            height: 60px;
+
+            background-image: url('../images/red-ball-2.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        max-width: 365px;
+
+        font-weight: 400;
+        font-size: 48px;
+        line-height: normal;
+
+        b {
+            text-transform: uppercase;
+        }
+    }
+
+    &__title-gradient {
+        display: inline-block;
+        font-weight: 900;
+    }
+
+    &__subtitle {
+        max-width: 275px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 760px) {
+    .welbex {
+        padding: 40px 0 30px;
+
+        &__title {
+            font-size: 42px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .welbex {
+        &__mobile-benefits {
+            display: grid;
+        }
+
+        &__benefits {
+            display: none;
+        }
+
+        &__mobile-benefits-item {
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .welbex {
+        &::before {
+            top: 15%;
+            left: 100%;
+        }
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__left {
+            margin-bottom: 45px;
+        }
+
+        &__description {
+            text-align: left;
+        }
+
+        &__right {
+            &::before {
+                top: none;
+                bottom: 0;
+                right: none;
+                left: 0;
+            }
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .welbex {
+        &__title {
+            font-size: 36px;
+        }
+    }
+}
